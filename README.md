@@ -5,7 +5,7 @@ Passing data through threads is a common task in multi-thread programming. The Q
 
 This project implements the `Event` and `BlockingQueue` in two files. You can copy these two files into your projects.
 
-An example using `Event` (The complete code is in the `event_example` directory). In this example, the child thread waits for user clicking, then prints a message.
+Here comes an example using `Event` (The complete code is in the `event_example` directory). In this example, the child thread waits for user clicking, then prints a message.
 
     #include <QApplication>
     #include <QPushButton>
@@ -45,7 +45,7 @@ An example using `Event` (The complete code is in the `event_example` directory)
         return app.exec();
     }
     
-Another example using `BlockingQueue` to implement the "Product/Consume" design pattern. In this example, we start 4 consumer threads to consume the message producted by the GUI thread.
+And another example using `BlockingQueue` to implement the "Product/Consume" design pattern. In this example, we start 4 consumer threads to consume the message producted by the GUI thread.
 
     #include <QCoreApplication>
     #include <QThread>
@@ -151,15 +151,15 @@ class BlockQueue
     
 * void putForcedly(const T& t);
 
-    Insert an element at the end of the queue, regardless of whether the queue is full. This function never block the current thread.
+    Insert an element at the end of the queue, regardless of whether the queue is full. This function never blocks the current thread.
     
 * void returnsForcely(const T &t);
 
-    Insert an element at the begining of the queue, regardless of wheter the queue is full. This function never block the current thread.
+    Insert an element at the begining of the queue, regardless of wheter the queue is full. This function never blocks the current thread.
     
 * void clear();
 
-    Remove all elements from the queue. This function never block the current thread.
+    Remove all elements from the queue. This function never blocks the current thread.
 
 * bool contains(const T &e) const;
 
@@ -167,7 +167,7 @@ class BlockQueue
     
 * bool remove(const T &e);
 
-    Remove the elelemt `e` from the queue. This function never block the current thread.
+    Remove the elelemt `e` from the queue. This function never blocks the current thread.
     
 * bool isEmpty() const;
 
